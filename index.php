@@ -1,16 +1,19 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-require_once('./controller/IndexController.php');
-require_once('./controller/ProcessOrderCreateController.php');
-require_once('./controller/PayController.php');
-require_once('./controller/ProcessPaymentController.php');
-require_once('./controller/ProcessShippingAddressController.php');
-require_once('./controller/ProcessShippingMethodController.php');
-require_once('./controller/SetShippingAddressController.php');
-require_once('./controller/SetShippingMethodController.php');
+require_once('./order/controller/IndexController.php');
+require_once('./order/controller/ProcessOrderCreateController.php');
+require_once('./order/controller/PayController.php');
+require_once('./order/controller/ProcessPaymentController.php');
+require_once('./order/controller/ProcessShippingAddressController.php');
+require_once('./order/controller/ProcessShippingMethodController.php');
+require_once('./order/controller/SetShippingAddressController.php');
+require_once('./order/controller/SetShippingMethodController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
-// c'est à dire : http://localhost:8888/esd-oop-php/public/
+// c'est à dire : http://localhost:8888/correction-workshop/public/
 // donc cela ne garde que la fin de l'url
 
 $requestUri = $_SERVER['REQUEST_URI'];
