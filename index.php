@@ -11,7 +11,8 @@ require_once('./order/controller/ProcessShippingAddressController.php');
 require_once('./order/controller/ProcessShippingMethodController.php');
 require_once('./order/controller/SetShippingAddressController.php');
 require_once('./order/controller/SetShippingMethodController.php');
-require_once('./products/controller/CreatePRoductController.php');
+require_once('./products/controller/CreateProductController.php');
+require_once('./products/controller/ProcessCreateProductController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
 // c'est à dire : http://localhost:8888/correction-workshop/public/
@@ -76,5 +77,11 @@ if ($endUri === "set-shipping-method") {
 if ($endUri === "create-product") {
     $productRepository = new CreateProductController();
     $productRepository->createProduct();
+    return;
+}
+
+if ($endUri === "process-create-product") {
+    $setCreateProductRepository = new ProcessCreateProductController();
+    $setCreateProductRepository->processCreateProduct();
     return;
 }
