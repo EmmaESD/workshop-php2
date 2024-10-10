@@ -17,7 +17,7 @@ class ProcessCreateProductController {
 			}
 
 			$productName = $_POST['productName'];
-			$productPrice = $_POST['productPrice'];
+			$productPrice = (float)$_POST['productPrice'];
             $productInfos = $_POST['productInfos'];
             $productStatus = isset($_POST['productStatus']) ? $_POST['productStatus'] : false;
 
@@ -32,9 +32,6 @@ class ProcessCreateProductController {
 			$errorMessage = $e->getMessage();
 			require_once './order/view/order-error.php';
 		}
-
-
 	}
-
 
 }

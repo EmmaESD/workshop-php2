@@ -8,26 +8,13 @@ class Product {
 
     private ?string $productName;
 
-    private int $productPrice;
+    private float $productPrice;
 
     private ?string $productInfos;
 
     private bool $productStatus;
 
-    public function __construct(bool $productStatus, int $productPrice) {
-        $this->productStatus = $productStatus;
-        $this->productPrice = $productPrice;
-
-        if (!$productPrice){
-            $productPrice = Product::$DEFAUT_PRICE;
-        }
-
-        if(!$productStatus){
-            $productStatus = Product::$STATUS_DEFAUT_PRODUCTS;
-        }
-    }
-
-    public function createProduct(float $productPrice, string $productInfos, string $productName){
+    public function __construct(float $productPrice, string $productInfos, string $productName) {
         if (!$productName || !$productInfos) {
             throw new Exception("Veuillez entrer un nom et une description");
         }
@@ -40,10 +27,19 @@ class Product {
             throw new Exception('Le prix doit être compris entre 1 et 500 €');
         }
 
+        if ($this->productPrice === 0 || $this->productPrice === null){
+            $productPrice = Product::$DEFAUT_PRICE;
+        }
+
+        if(!$productStatus){
+            $productStatus = Product::$STATUS_DEFAUT_PRODUCTS;
+        }
+
         $this->productName = $productName;
         $this->productInfos = $productInfos;
         $this->productPrice = $productPrice;
-        
+        $this->productStatus = $productStatus;
     }
+
     
 }
