@@ -10,10 +10,10 @@
 
 		<nav>
 			<ul>
-				<li><a href="http://localhost:8888/esd-oop-php/">Commander</a></li>
-				<li><a href="http://localhost:8888/esd-oop-php/set-shipping-address">Renseigner l'adresse de livraion</a></li>
-				<li><a href="http://localhost:8888/esd-oop-php/set-shipping-method">Renseigner la méthode de livraison</a></li>
-				<li><a href="http://localhost:8888/esd-oop-php/pay">Payer</a></li>
+				<li><a href="http://localhost:8888/correction-workshop/">Commander</a></li>
+				<li><a href="http://localhost:8888/correction-workshop/set-shipping-address">Renseigner l'adresse de livraion</a></li>
+				<li><a href="http://localhost:8888/correction-workshop/set-shipping-method">Renseigner la méthode de livraison</a></li>
+				<li><a href="http://localhost:8888/correction-workshop/pay">Payer</a></li>
 
 
 			</ul>

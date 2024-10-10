@@ -15,7 +15,7 @@ require_once('./controller/SetShippingMethodController.php');
 
 $requestUri = $_SERVER['REQUEST_URI'];
 $uri = parse_url($requestUri, PHP_URL_PATH);
-$endUri = str_replace('/esd-oop-php/', '', $uri);
+$endUri = str_replace('/correction-workshop/', '', $uri);
 $endUri = trim($endUri, '/');
 
 
