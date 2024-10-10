@@ -4,7 +4,7 @@ class Product {
     public static $DEFAUT_PRICE = 2;
     public static $STATUS_DEFAUT_PRODUCTS = false;
     public static $MAX_PRICE = 500;
-    public static $MIN_PRICE = 1
+    public static $MIN_PRICE = 1;
 
     private ?string $productName;
 
