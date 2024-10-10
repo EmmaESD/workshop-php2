@@ -1,16 +1,18 @@
 <?php
 
-require_once './model/entity/Order.php';
+require_once './model/Order.php';
+require_once './model/repository/OrderRepository.php';
 
 
 class CreateOrderController {
 
 	public function createOrder() {
-		session_start();
+		$orderRepository = new OrderRepository();
+        $order = $orderRepository->find();
 
 		try {
 
-			if (!isset($_POST['customerName']) || !isset($_POST['products'])) {
+			if (!$order) {
 				$errorMessage = "Merci de remplir les champs. J'ai pas fait tout ça pour rien.";
 				
 				require_once './view/order-error.php';
@@ -22,7 +24,7 @@ class CreateOrderController {
 
 			$order = new Order($customerName, $products);
 
-			$this->persistOrder($order);
+			$orderRepository->persistOrder($order);
 
 			require_once './view/order-created.php';
 
