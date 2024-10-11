@@ -1,4 +1,4 @@
-<?php require_once('./order/view/partials/header.php'); ?>
+<?php require_once('./common/partials/header.php'); ?>
 <main>
 
 		<form method="POST" action="http://localhost:8888/correction-workshop/create-order">
@@ -25,4 +25,4 @@
 
 	</main>
 
-<?php require_once('./order/view/partials/footer.php'); ?>
+<?php require_once('./common/partials/footer.php'); ?>

@@ -1,5 +1,5 @@
 
-<?php require_once('./order/view/partials/header.php'); ?>
+<?php require_once('./common/partials/header.php'); ?>
 	
 
 	<ul>
@@ -14,4 +14,4 @@
 	</ul>
 
 
-	<?php require_once('./order/view/partials/footer.php'); ?>
+	<?php require_once('./common/partials/footer.php'); ?>

@@ -1,4 +1,4 @@
-<?php require_once './order/view/partials/header.php'; ?>
+<?php require_once './common/partials/header.php'; ?>
 <body>
     <main>
         <form action="http://localhost:8888/correction-workshop/process-create-product" method="POST">
