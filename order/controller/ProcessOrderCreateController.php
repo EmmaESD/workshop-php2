@@ -11,7 +11,7 @@ class CreateOrderController {
 		try {
 
 			if (!isset($_POST['customerName']) || !isset($_POST['products'])) {
-				$errorMessage = "Merci de remplir les champs. J'ai pas fait tout ça pour rien.";
+				$errorMessage = "Merci de remplir les champs.";
 				
 				require_once './order/view/order-error.php';
 				return;
