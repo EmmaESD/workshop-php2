@@ -2,7 +2,8 @@
 	
 	<main>
 		<p>Payer la commande (c'est même pas débité sur votre compte. Ou peut être que si. Mais faites confiance) </p>
-
+		
+	//Afficher le récapitulatif de la commande.
 
 		<form method="POST" action="http://localhost:8888/correction-workshop/process-payment">
 

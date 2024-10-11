@@ -10,12 +10,9 @@
 			<label for="product">Produit</label>
 
 			<select id="product" name="products[]" multiple>
-				<option value="tshirt">T-shirt</option>
-				<option value="jeans">Jeans</option>
-				<option value="shoes">Chaussures</option>
-				<option value="short">Short</option>
-				<option value="cap">Casquette</option>
-				<option value="pull">Pull</option>
+				<?php foreach ($products as $product):?>
+					<option value="<?php echo $productId ?>"><?php echo $product->productName; ?></option>
+				<?php endforeach ?>
 			</select>
 			<br>
 
