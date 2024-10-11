@@ -46,32 +46,32 @@ if ($endUri === "pay") {
 
 
 if ($endUri === "process-payment") {
-    $payController = new ProcessPaymentController();
-    $payController->processPayment();
+    $processPaymentController = new ProcessPaymentController();
+    $processPaymentController->processPayment();
     return;
 }
 
 if ($endUri === "process-shipping-address") {
-    $payController = new ProcessShippingAddressController();
-    $payController->processShippingAddress();
+    $processShippingAddressController = new ProcessShippingAddressController();
+    $processShippingAddressController->processShippingAddress();
     return;
 }
 
 if ($endUri === "process-shipping-method") {
-    $payController = new ProcessShippingMethodController();
-    $payController->processShippingMethod();
+    $processShippingMethodController = new ProcessShippingMethodController();
+    $processShippingMethodController->processShippingMethod();
     return;
 }
 
 if ($endUri === "set-shipping-address") {
-    $payController = new SetShippingAddressController();
-    $payController->setShippingAddress();
+    $setShippingAddressController = new SetShippingAddressController();
+    $setShippingAddressController->setShippingAddress();
     return;
 }
 
 if ($endUri === "set-shipping-method") {
-    $payController = new SetShippingMethodController();
-    $payController->setShippingMethod();
+    $setShippingMethodController = new SetShippingMethodController();
+    $setShippingMethodController->setShippingMethod();
     return;
 }
 

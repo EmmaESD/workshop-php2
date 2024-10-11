@@ -6,6 +6,7 @@ class Product {
     public static $MAX_PRICE = 500;
     public static $MIN_PRICE = 1;
 
+    public string $id;
     public ?string $productName;
     public float $productPrice;
     public ?string $productInfos;
@@ -33,6 +34,7 @@ class Product {
             $productStatus = Product::$STATUS_DEFAUT_PRODUCTS;
         }
 
+        $this->id = uniqid();
         $this->productName = $productName;
         $this->productPrice = $productPrice;
         $this->productInfos = $productInfos;
