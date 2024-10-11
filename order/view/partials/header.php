@@ -15,6 +15,7 @@
 				<li><a href="http://localhost:8888/correction-workshop/set-shipping-method">Renseigner la méthode de livraison</a></li>
 				<li><a href="http://localhost:8888/correction-workshop/pay">Payer</a></li>
 				<li><a href="http://localhost:8888/correction-workshop/create-product">Créer un produit</a></li>
+				<li><a href="http://localhost:8888/correction-workshop/product-created">Voir la liste de produits</a></li>
 
 			</ul>
 		</nav>

@@ -13,6 +13,7 @@ require_once('./order/controller/SetShippingAddressController.php');
 require_once('./order/controller/SetShippingMethodController.php');
 require_once('./products/controller/CreateProductController.php');
 require_once('./products/controller/ProcessCreateProductController.php');
+require_once('./products/controller/ListProductsController.php');
 
 // Récupère l'url actuelle et supprime le chemin de base
 // c'est à dire : http://localhost:8888/correction-workshop/public/
@@ -24,7 +25,7 @@ $endUri = str_replace('/correction-workshop/', '', $uri);
 $endUri = trim($endUri, '/');
 
 
-if($endUri === "") {
+if($endUri === "") {    
     $indexController = new IndexController();
     $indexController->index();
     return;
@@ -83,5 +84,11 @@ if ($endUri === "create-product") {
 if ($endUri === "process-create-product") {
     $setCreateProductRepository = new ProcessCreateProductController();
     $setCreateProductRepository->processCreateProduct();
+    return;
+}
+
+if ($endUri === "product-created") {
+    $ProductCreatedRepository = new ListProductsController();
+    $ProductCreatedRepository->listProductsController();
     return;
 }

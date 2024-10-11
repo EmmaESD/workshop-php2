@@ -13,17 +13,16 @@ class ProductRepository {
 		session_start();
 	}
 
-	public function persist(Product $product): Product {
-		$_SESSION['product'] = $product;
-		return $product;
+	public function persist(Product $products): void {
+		$_SESSION['products'][] = $products;
 	}
 
-	public function find(): ?Product {
-		if (!isset($_SESSION['product'])) {
+	public function findAll(): ?array {
+		if (!isset($_SESSION['products'])) {
 			return null;
 		}
 
-		return $_SESSION['product'];
+		return $_SESSION['products'];
 	}
 
 }

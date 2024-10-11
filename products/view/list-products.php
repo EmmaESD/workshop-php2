@@ -1,14 +1,17 @@
-<?php var_dump($_SESSION) ?>
 
 <?php require_once('./order/view/partials/header.php'); ?>
 	
-	<main>
-		<p>Votre Produit :</p>
 
-        <p>nom : <?php echo "$productName"?></p>
-        <p>Description: <? echo "$productInfos"?></p>
-        <p>Prix: <? echo "$productPrice"?></p>
-	</main>
+	<ul>
+		<?php foreach ($products as $product): ?>
+			<li>
+            	<p>Nom : <?php echo $product->productName; ?></p>
+            	<p>Description : <?php echo $product->productInfos; ?></p>
+            	<p>Prix : <?php echo $product->productPrice; ?> €</p>
+            	<p>Statut : <?php echo $product->productStatus; ?></p>
+        	</li>
+		<?php endforeach ?>
+	</ul>
 
 
 	<?php require_once('./order/view/partials/footer.php'); ?>

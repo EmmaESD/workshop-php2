@@ -17,7 +17,7 @@ class ProcessCreateProductController {
 			}
 
 			$productName = $_POST['productName'];
-			$productPrice = (float)$_POST['productPrice'];
+			$productPrice = floatval($_POST['productPrice']);
             $productInfos = $_POST['productInfos'];
             $productStatus = isset($_POST['productStatus']) ? $_POST['productStatus'] : false;
 
@@ -26,7 +26,7 @@ class ProcessCreateProductController {
 			$productRepository = new ProductRepository();
 			$productRepository->persist($product);
 
-			require_once './products/view/list-products.php';
+			require_once './products/view/product-created.php';
 
 		} catch (Exception $e) {
 			$errorMessage = $e->getMessage();
