@@ -1,7 +1,21 @@
-<?php require_once('./common/partials/header.php'); ?>
+<?php 
+require_once('./common/partials/header.php');
+
+?>
 	
 	<main>
-		<p>Payer la commande (c'est même pas débité sur votre compte. Ou peut être que si. Mais faites confiance) </p>
+		<p>Récapitulatif de la commande </p>
+		<p>produits :</p>
+		<ul> 
+			<?php foreach ($products as $product): ?>
+				<li> <?php echo "$product->productName" ?> </li>
+			<?php endforeach?>
+		</ul>
+		<p>Nom de la commande :</p>
+		<p>Adresse de livraison: </p>
+		<p>Mode de livraison:</p>
+		<p>PRix de la commande:</p>
+
 		
 	//Afficher le récapitulatif de la commande.
 

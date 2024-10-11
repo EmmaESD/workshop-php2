@@ -11,7 +11,7 @@
 
 			<select id="product" name="products[]" multiple>
 				<?php foreach ($products as $product):?>
-					<option value="<?php echo $productId ?>"><?php echo $product->productName; ?></option>
+					<option value="<?php echo $product->productId; ?>"><?php echo $product->productName; ?></option>
 				<?php endforeach ?>
 			</select>
 			<br>

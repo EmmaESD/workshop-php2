@@ -8,7 +8,6 @@ class Order {
 	public static $PAID_STATUS = "PAID";
 	public static $MAX_PRODUCTS_BY_ORDER = 5;
 	public static $BLACKLISTED_CUSTOMERS = ['David Robert'];
-	public static $UNIQUE_PRODUCT_PRICE = 5;
 	public static $AUTORIZED_SHIPPING_COUNTRIES = ['France', 'Belgique', 'Luxembourg'];
 	public static $AVAILABLE_SHIPPING_METHODS = ['Chronopost Express', 'Point relais', 'Domicile'];
 	public static $PAID_SHIPPING_METHOD = 'Chronopost Express';
@@ -48,13 +47,15 @@ class Order {
 		$this->id = rand();
 		$this->products = $products;
 		$this->customerName = $customerName;
-		$this->totalPrice = count($products) * Order::$UNIQUE_PRODUCT_PRICE;
+		$this->totalPrice = 0;
 	}
 
 
 
 	private function calculateTotalCart():  float {
-		return count($this->products) * Order::$UNIQUE_PRODUCT_PRICE;
+		foreach ($products as $product) {
+			$this->totalPrice += $product->productPrice;  
+		}
 	}
 
 
